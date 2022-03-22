@@ -1,0 +1,59 @@
+<main
+  class="mb-auto"
+  style="text-align: center; font-size: 20px; letter-spacing: 3px"
+>
+  <div *ngIf="mood == 'partly-cloudy'">
+    <div class="icon sun-shower">
+      <div class="cloud"></div>
+      <div class="sun"><div class="rays"></div></div>
+    </div>
+  </div>
+  <div *ngIf="mood == 'stormy'">
+    <div class="icon thunder-storm">
+      <div class="cloud"></div>
+      <div class="lightning">
+        <div class="bolt"></div>
+        <div class="bolt"></div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="mood == 'cloudy'">
+    <div class="icon cloudy">
+      <div class="cloud"></div>
+      <div class="cloud"></div>
+    </div>
+  </div>
+  <div *ngIf="mood == 'sunny'">
+    <div class="icon sunny">
+      <div class="sun"><div class="rays"></div></div>
+    </div>
+  </div>
+  <div *ngIf="mood == 'sunnny'">
+    <div class="icon sunny">
+      <div class="sun"><div class="rays"></div></div>
+    </div>
+    <div class="icon sunny">
+      <div class="sun"><div class="rays"></div></div>
+    </div>
+  </div>
+  <div *ngIf="mood == 'rainy'">
+    <div class="icon rainy">
+      <div class="cloud"></div>
+      <div class="rain"></div>
+    </div>
+  </div>
+  <div *ngIf="mood == 'snowy'">
+    <div class="icon flurries">
+      <div class="cloud"></div>
+      <div class="snow">
+        <div class="flake"></div>
+        <div class="flake"></div>
+      </div>
+    </div>
+  </div>
+  <h1>{{ temperature }} C°</h1>
+  <p class="lead">
+    {{ dateTime }} <br />
+    {{ mood }}
+  </p>
+</main>
