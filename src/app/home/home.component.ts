@@ -1,16 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { IWeather } from './weather';
-import { WeatherService } from '../services/weather.service';
+import { IWeather } from '../../models/response/weather.response';
+import { WeatherService } from '../../services/weather.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
-  providers: [WeatherService],
+  providers: [],
 })
 export class HomeComponent implements OnInit {
   temperature: number;
   mood: string;
-  dateTime: string;
   weathers: IWeather = <IWeather>{};
   today = new Date();
   constructor(private weatherService: WeatherService) {}
@@ -24,18 +23,7 @@ export class HomeComponent implements OnInit {
       this.weathers = data;
       this.temperature = this.weathers.hourly.temperature_2m[hour - 1];
       this.getMood();
-      this.getDate();
     });
-  }
-  getDate() {
-    var date =
-      this.today.getFullYear() +
-      '-' +
-      (this.today.getMonth() + 1) +
-      '-' +
-      this.today.getDate();
-    var time = this.today.getHours() + ':' + this.today.getMinutes();
-    this.dateTime = date + ' ' + time;
   }
 
   getMood() {
@@ -46,7 +34,7 @@ export class HomeComponent implements OnInit {
       'cloudy', //15-20
       'partly-cloudy', //20-25
       'sunny', //25-30
-      'sunnny', //30-35
+      'sunny', //30-35
     ];
     this.mood = moods[Math.floor(this.temperature / 5)];
   }

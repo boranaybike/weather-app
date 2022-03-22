@@ -305,15 +305,3 @@ p {
     opacity: 0.2;
   }
 }
-/* text */
-.text {
-  font-family: Helvetica, "Helvetica Neue", sans-serif;
-  letter-spacing: 1px;
-  text-align: center;
-  margin-left: -43px;
-  font-weight: bold;
-  margin-top: 20px;
-  font-size: 11px;
-  color: #a0a0a0;
-  width: 200px;
-}

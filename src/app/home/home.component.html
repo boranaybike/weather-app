@@ -28,14 +28,6 @@
       <div class="sun"><div class="rays"></div></div>
     </div>
   </div>
-  <div *ngIf="mood == 'sunnny'">
-    <div class="icon sunny">
-      <div class="sun"><div class="rays"></div></div>
-    </div>
-    <div class="icon sunny">
-      <div class="sun"><div class="rays"></div></div>
-    </div>
-  </div>
   <div *ngIf="mood == 'rainy'">
     <div class="icon rainy">
       <div class="cloud"></div>
@@ -53,7 +45,7 @@
   </div>
   <h1>{{ temperature }} C°</h1>
   <p class="lead">
-    {{ dateTime }} <br />
+    {{ today | date: "yyyy-MM-dd HH:mm" }} <br />
     {{ mood }}
   </p>
 </main>
