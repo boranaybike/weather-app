@@ -1,4 +1,8 @@
 # Weather
+This project showing instant temperature. Also finds the weather (snowy, rainy, sunny) according to the instant temperature.
+
+
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.0.
 
