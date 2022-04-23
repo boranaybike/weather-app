@@ -45,7 +45,12 @@
   </div>
   <h1>{{ temperature }} C°</h1>
   <p class="lead">
-    {{ today | date: "yyyy-MM-dd HH:mm" }} <br />
+    {{ today_string | date: "yyyy-MM-dd HH:mm" }} <br />
     {{ mood }}
   </p>
+  <select [(ngModel)]="date" (change)="changeTemp()">
+    <option *ngFor="let time of weathers.hourly.time" [value]="time">
+      {{ time | date: "yyyy-MM-dd HH:mm" }}
+    </option>
+  </select>
 </main>

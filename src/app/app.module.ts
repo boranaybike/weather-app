@@ -6,10 +6,11 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { WeatherService } from 'src/services/weather.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [WeatherService],
   bootstrap: [AppComponent],
 })
